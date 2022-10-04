@@ -11,5 +11,7 @@ RUN sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/inst
 
 RUN echo "$(curl -fsSL https://raw.githubusercontent.com/PepeSegura/AutoVIM/master/source/.zshrc)" > /root/.zshrc
 RUN echo "$(curl -fsSL https://raw.githubusercontent.com/PepeSegura/AutoVIM/master/source/.vimrc)" > /root/.vimrc
+RUN mkdir -p /root/.vim/colors
+RUN echo "$(curl -fsSL https://raw.githubusercontent.com/erichdongubler/vim-sublime-monokai/master/colors/sublimemonokai.vim)" > /root/.vim/colors/sublimemonokai.vim
 
 WORKDIR /home
